@@ -92,7 +92,10 @@ function CameraRig() {
 export function HeroScene() {
   return (
     <div className="absolute inset-0 -z-10">
-      <Canvas camera={{ position: [0, 0, 8], fov: 60 }} gl={{ antialias: true, alpha: true }}>
+      <Canvas
+        camera={{ position: [0, 0, 8], fov: 60 }}
+        gl={{ antialias: true, alpha: true }}
+      >
         <color attach="background" args={["#e8eaef"]} />
         <fog attach="fog" args={["#e8eaef", 5, 25]} />
         <ambientLight intensity={0.6} />

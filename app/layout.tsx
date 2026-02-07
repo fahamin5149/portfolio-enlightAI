@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { Toaster } from "sonner";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -13,8 +14,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "EnlightAI-Building the Future with AI",
-  description: "Empowering Innovation through Artificial Intelligence Solutions",
+  title: "EnlightAI — Production-Ready AI Solutions",
+  description:
+    "EnlightAI delivers enterprise-grade AI solutions — Computer Vision, NLP & LLMs, Voice AI — with full-stack development and cloud deployment.",
   icons: {
     icon: "/logo-icon.png",
   },
@@ -31,6 +33,17 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
+        <Toaster
+          theme="light"
+          position="bottom-right"
+          toastOptions={{
+            style: {
+              background: "hsl(228 20% 96%)",
+              border: "1px solid hsl(228 15% 82%)",
+              color: "hsl(230 25% 10%)",
+            },
+          }}
+        />
       </body>
     </html>
   );
